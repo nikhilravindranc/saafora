@@ -1329,7 +1329,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 =========================== */
 .site-footer {
   position: relative;
-  background: var(--color-cream);
+  background: var(--color-navy);
   overflow: hidden;
   padding-top: 80px;
 }
@@ -1340,7 +1340,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   bottom: -20px;
   width: 400px;
   height: auto;
-  opacity: 0.14;
+  opacity: 0.22;
   pointer-events: none;
 }
 
@@ -1351,11 +1351,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   grid-template-columns: 1.3fr 1fr 0.85fr 1fr;
   gap: 48px;
   padding-bottom: 56px;
-  border-bottom: 1px solid rgba(44, 47, 68, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-logo {
-  height: 84px;
+  height: 96px;
   width: auto;
   margin-bottom: 20px;
 }
@@ -1364,8 +1364,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.6;
-  color: var(--color-navy);
-  opacity: 0.65;
+  color: var(--color-cream);
+  opacity: 0.7;
   max-width: 300px;
   margin-bottom: 24px;
 }
@@ -1380,8 +1380,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid rgba(44, 47, 68, 0.18);
-  color: var(--color-taupe-dark);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-taupe);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1393,7 +1393,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer-social a:hover {
   background: var(--color-taupe);
   border-color: var(--color-taupe);
-  color: var(--color-white);
+  color: var(--color-navy);
 }
 
 .footer-col h4 {
@@ -1402,7 +1402,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-navy);
+  color: var(--color-white);
 }
 
 .footer-col .rule.light { margin: 12px 0 20px; }
@@ -1417,12 +1417,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer-col ul a {
   font-family: var(--font-body);
   font-size: 14px;
-  color: var(--color-navy);
-  opacity: 0.65;
+  color: var(--color-cream);
+  opacity: 0.72;
   transition: opacity 0.3s var(--ease), color 0.3s var(--ease);
 }
 
-.footer-col ul a:hover { opacity: 1; color: var(--color-taupe-dark); }
+.footer-col ul a:hover { opacity: 1; color: var(--color-taupe); }
 
 .footer-connect a,
 .footer-location {
@@ -1437,8 +1437,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer-location {
   font-family: var(--font-body);
   font-size: 14px;
-  color: var(--color-navy);
-  opacity: 0.65;
+  color: var(--color-cream);
+  opacity: 0.72;
 }
 
 .footer-bottom {
@@ -1452,8 +1452,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 26px 0;
   font-family: var(--font-body);
   font-size: 13px;
-  color: var(--color-navy);
-  opacity: 0.55;
+  color: var(--color-cream);
+  opacity: 0.6;
 }
 
 .footer-legal {
@@ -1463,14 +1463,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .footer-legal a {
-  color: var(--color-navy);
+  color: var(--color-cream);
   opacity: 0.7;
   transition: color 0.3s var(--ease), opacity 0.3s var(--ease);
 }
 
-.footer-legal a:not(:first-child) { border-left: 1px solid rgba(44,47,68,0.18); padding-left: 18px; }
+.footer-legal a:not(:first-child) { border-left: 1px solid rgba(255,255,255,0.2); padding-left: 18px; }
 
-.footer-legal a:hover { color: var(--color-taupe-dark); opacity: 1; }
+.footer-legal a:hover { color: var(--color-taupe); opacity: 1; }
 
 /* ===========================
    Responsive
