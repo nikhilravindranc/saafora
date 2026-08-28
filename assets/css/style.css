@@ -1329,7 +1329,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 =========================== */
 .site-footer {
   position: relative;
-  background: var(--color-navy);
+  background: #3D414F;
   overflow: hidden;
   padding-top: 80px;
 }
@@ -1358,6 +1358,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   height: 84px;
   width: auto;
   margin-bottom: 20px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4)) brightness(1.08) contrast(1.05);
 }
 
 .footer-brand p {
