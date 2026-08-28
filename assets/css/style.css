@@ -55,14 +55,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   transition: background-color 0.5s var(--ease), box-shadow 0.5s var(--ease), height 0.4s var(--ease);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   box-shadow: 0 1px 0 rgba(44, 47, 68, 0.05), 0 8px 24px rgba(16, 17, 26, 0.08);
 }
 
 .site-header.is-scrolled {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 1px 0 rgba(44, 47, 68, 0.06);
   height: 92px;
 }
@@ -91,6 +91,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: auto;
   display: block;
   transition: height 0.4s var(--ease);
+  filter: contrast(1.25) saturate(1.15) brightness(0.94) drop-shadow(0 1px 1.5px rgba(44, 47, 68, 0.2));
 }
 
 .nav-links {
