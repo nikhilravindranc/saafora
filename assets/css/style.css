@@ -1355,18 +1355,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .footer-logo {
-  height: 96px;
+  height: 132px;
   width: auto;
   margin-bottom: 20px;
 }
 
 .footer-brand p {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--color-cream);
   opacity: 0.7;
-  max-width: 300px;
+  max-width: 320px;
   margin-bottom: 24px;
 }
 
@@ -1398,7 +1398,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .footer-col h4 {
   font-family: var(--font-body);
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1416,7 +1416,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .footer-col ul a {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15.5px;
   color: var(--color-cream);
   opacity: 0.72;
   transition: opacity 0.3s var(--ease), color 0.3s var(--ease);
@@ -1436,7 +1436,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .footer-location {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15.5px;
   color: var(--color-cream);
   opacity: 0.72;
 }
@@ -1451,7 +1451,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 16px;
   padding: 26px 0;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--color-cream);
   opacity: 0.6;
 }
