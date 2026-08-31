@@ -68,7 +68,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .site-header.is-scrolled .brand img {
-  height: 78px;
+  height: 68px;
 }
 
 .nav-inner {
@@ -87,7 +87,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .brand img {
-  height: 104px;
+  height: 86px;
   width: auto;
   display: block;
   transition: height 0.4s var(--ease);
