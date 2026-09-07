@@ -1457,6 +1457,183 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ===========================
+   Contact Page
+=========================== */
+.contact-section {
+  padding: 100px 0 140px;
+  background: var(--color-white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 1fr);
+  gap: 64px;
+}
+
+.contact-form-title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 2.6vw, 2.2rem);
+  color: var(--color-navy);
+  margin: 16px 0 32px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  opacity: 0.7;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-navy);
+  padding: 14px 16px;
+  border: 1px solid var(--color-mist);
+  border-radius: 4px;
+  background: var(--color-white);
+  transition: border-color 0.3s var(--ease);
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-taupe);
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 8l5 5 5-5' stroke='%23b4947d' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-submit {
+  margin-top: 8px;
+}
+
+.form-submit .btn {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.form-note {
+  margin-top: 14px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-navy);
+  opacity: 0.55;
+}
+
+.contact-info-card {
+  background: var(--color-navy);
+  color: var(--color-cream);
+  padding: 44px 36px;
+  border-radius: 6px;
+  align-self: start;
+}
+
+.contact-info-title {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-taupe);
+  display: block;
+  margin-bottom: 28px;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.contact-info-item:last-of-type { margin-bottom: 0; }
+
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-icon svg { width: 19px; height: 19px; }
+
+.contact-info-item strong {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+.contact-info-item span,
+.contact-info-item a {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--color-cream);
+  opacity: 0.8;
+}
+
+.contact-info-item a:hover { opacity: 1; color: var(--color-taupe); }
+
+.contact-map {
+  margin-top: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ===========================
    CTA Band
 =========================== */
 .cta-band {
@@ -1948,6 +2125,10 @@ body.promo-open { overflow: hidden; }
   .detail-grid { grid-template-columns: 1fr; gap: 40px; }
   .detail-scope-list { grid-template-columns: 1fr; }
   .detail-hero-media { aspect-ratio: 4 / 3; }
+
+  .contact-section { padding: 64px 0 90px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
 
   .solutions-grid { grid-template-columns: 1fr; gap: 44px; }
   .solutions-panel { grid-template-columns: 1fr; }
