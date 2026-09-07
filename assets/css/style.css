@@ -1606,7 +1606,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: 6px;
 }
 
-.contact-info-item span,
+.contact-info-item span:not(.contact-info-icon),
 .contact-info-item a {
   display: block;
   font-family: var(--font-body);
