@@ -987,12 +987,87 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .text-link:hover { gap: 14px; color: var(--color-taupe-dark); }
 
 /* ===========================
+   Page Header (interior pages)
+=========================== */
+.page-header {
+  position: relative;
+  padding: calc(var(--nav-height) + 80px) 0 72px;
+  background: var(--color-navy);
+  overflow: hidden;
+}
+
+.page-header-dots {
+  position: absolute;
+  right: 64px;
+  top: 56px;
+  width: 90px;
+  height: 90px;
+  background-image: radial-gradient(var(--color-taupe) 1.4px, transparent 1.4px);
+  background-size: 16px 16px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.breadcrumb {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-cream);
+  opacity: 0.6;
+  letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+
+.breadcrumb a { color: var(--color-cream); opacity: 0.9; transition: color 0.3s var(--ease); }
+.breadcrumb a:hover { color: var(--color-taupe); }
+.breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+
+.page-header-eyebrow {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-taupe);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.page-header-heading {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 4.4vw, 3.4rem);
+  line-height: 1.12;
+  color: var(--color-white);
+  max-width: 720px;
+}
+
+.page-header p {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-cream);
+  opacity: 0.75;
+  max-width: 560px;
+  margin-top: 18px;
+}
+
+/* ===========================
    Selected Projects
 =========================== */
 .projects {
   padding: 140px 0 0;
   background: var(--color-white);
 }
+
+.projects.no-hero-padding { padding-top: 72px; }
 
 .projects-top {
   display: grid;
@@ -1001,6 +1076,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   margin-bottom: 56px;
 }
+
+.projects-top.stats-only { grid-template-columns: 1fr; }
 
 .projects-title {
   font-family: var(--font-heading);
@@ -1142,6 +1219,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 8px 0 8px;
 }
 
+.project-body h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s var(--ease);
+}
+
+.project-body h3 a:hover { color: var(--color-taupe-dark); }
+
 .project-location {
   display: flex;
   align-items: center;
@@ -1220,6 +1305,155 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .projects-band .band-cta-link {
   color: var(--color-cream);
   border-bottom-color: var(--color-taupe);
+}
+
+/* ===========================
+   Project Detail
+=========================== */
+.detail-hero {
+  padding: 72px 0 0;
+  background: var(--color-white);
+}
+
+.detail-hero-media {
+  max-width: 1100px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.detail-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-body {
+  padding: 72px 0 0;
+  background: var(--color-white);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(240px, 1fr);
+  gap: 72px;
+}
+
+.detail-main .project-category {
+  margin-bottom: 14px;
+}
+
+.detail-main h1 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
+  line-height: 1.15;
+  color: var(--color-navy);
+  margin-bottom: 20px;
+}
+
+.detail-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  color: var(--color-navy);
+  opacity: 0.65;
+  margin-bottom: 32px;
+}
+
+.detail-location svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.detail-text p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-navy);
+  opacity: 0.75;
+  margin-bottom: 20px;
+  max-width: 620px;
+}
+
+.detail-scope-title {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  margin: 36px 0 18px;
+}
+
+.detail-scope-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  max-width: 620px;
+}
+
+.detail-scope-list li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-navy);
+  opacity: 0.8;
+}
+
+.detail-scope-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 10px;
+  height: 1px;
+  background: var(--color-taupe);
+}
+
+.detail-facts {
+  align-self: start;
+  border: 1px solid var(--color-mist);
+  border-radius: 6px;
+  padding: 32px 28px;
+}
+
+.detail-fact {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-cream);
+}
+
+.detail-fact:first-child { padding-top: 0; }
+.detail-fact:last-child { border-bottom: none; padding-bottom: 0; }
+
+.detail-fact-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-taupe-dark);
+  margin-bottom: 6px;
+}
+
+.detail-fact-value {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  color: var(--color-navy);
+}
+
+.detail-facts .btn {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.detail-back {
+  padding: 64px 0 0;
 }
 
 /* ===========================
@@ -1707,6 +1941,13 @@ body.promo-open { overflow: hidden; }
   .approach-bg-art { width: 240px; opacity: 0.25; }
   .band-art { width: 260px; right: 24px; opacity: 0.5; }
   .band-dots { display: none; }
+
+  .page-header { padding: calc(var(--nav-height) + 48px) 0 56px; }
+  .page-header-dots { display: none; }
+
+  .detail-grid { grid-template-columns: 1fr; gap: 40px; }
+  .detail-scope-list { grid-template-columns: 1fr; }
+  .detail-hero-media { aspect-ratio: 4 / 3; }
 
   .solutions-grid { grid-template-columns: 1fr; gap: 44px; }
   .solutions-panel { grid-template-columns: 1fr; }
