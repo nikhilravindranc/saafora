@@ -1777,7 +1777,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
 }
 
 .director-memberships li {
@@ -1786,6 +1786,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-family: var(--font-body);
   font-size: 15px;
   color: var(--color-navy);
+}
+
+.director-memberships li strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.director-memberships li span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.7;
+  max-width: 560px;
 }
 
 .director-memberships li::before {
@@ -1813,7 +1827,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .about-locations-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 480px);
   gap: 32px;
   margin-top: 40px;
 }
