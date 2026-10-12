@@ -39,6 +39,21 @@ if (heroVideo) {
     heroVideo.addEventListener('canplay', reveal, { once: true });
   }
 
+  // Sound toggle: browsers block autoplay with sound, so the video starts muted
+  const soundBtn = document.getElementById('heroSound');
+  if (soundBtn) {
+    const label = soundBtn.querySelector('.hero-sound-label');
+    soundBtn.addEventListener('click', () => {
+      heroVideo.muted = !heroVideo.muted;
+      if (!heroVideo.muted && heroVideo.paused) heroVideo.play().catch(() => {});
+      const on = !heroVideo.muted;
+      soundBtn.classList.toggle('is-on', on);
+      soundBtn.setAttribute('aria-pressed', String(on));
+      soundBtn.setAttribute('aria-label', on ? 'Turn sound off' : 'Turn sound on');
+      if (label) label.textContent = on ? 'Sound off' : 'Sound on';
+    });
+  }
+
   // Respect users who prefer reduced motion — freeze on poster frame
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
