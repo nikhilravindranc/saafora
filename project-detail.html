@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/style.css?v=20261018">
+<link rel="stylesheet" href="assets/css/style.css?v=20261019">
 <link rel="icon" href="assets/img/favicon.png">
 </head>
 <body>
@@ -72,23 +72,32 @@
 
     <aside class="detail-facts">
       <div class="detail-fact">
-        <span class="detail-fact-label">Client</span>
-        <span class="detail-fact-value" id="factClient">&mdash;</span>
+        <span class="detail-fact-label">Category</span>
+        <span class="detail-fact-value" id="factCategory">&mdash;</span>
       </div>
       <div class="detail-fact">
         <span class="detail-fact-label">Location</span>
         <span class="detail-fact-value" id="factLocation">&mdash;</span>
       </div>
-      <div class="detail-fact">
-        <span class="detail-fact-label">Duration</span>
-        <span class="detail-fact-value" id="factDuration">&mdash;</span>
+      <div class="detail-fact" id="factClientRow" hidden>
+        <span class="detail-fact-label">Client</span>
+        <span class="detail-fact-value" id="factClient"></span>
       </div>
-      <div class="detail-fact">
+      <div class="detail-fact" id="factDurationRow" hidden>
+        <span class="detail-fact-label">Duration</span>
+        <span class="detail-fact-value" id="factDuration"></span>
+      </div>
+      <div class="detail-fact" id="factCompletedRow" hidden>
         <span class="detail-fact-label">Completed</span>
-        <span class="detail-fact-value" id="factCompleted">&mdash;</span>
+        <span class="detail-fact-value" id="factCompleted"></span>
       </div>
       <a href="#" id="detailWhatsapp" class="btn btn-primary" target="_blank" rel="noopener">Discuss This Project <span aria-hidden="true">&rarr;</span></a>
     </aside>
+  </div>
+
+  <div class="container detail-gallery" id="detailGallery" hidden>
+    <h3 class="detail-scope-title">Project Gallery</h3>
+    <div class="detail-gallery-grid" id="detailGalleryGrid"></div>
   </div>
 
   <div class="container detail-back">

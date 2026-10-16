@@ -23,10 +23,27 @@
   const scopeList = document.getElementById('detailScopeList');
   scopeList.innerHTML = project.scope.map((item) => '<li>' + item + '</li>').join('');
 
-  document.getElementById('factClient').textContent = project.client;
+  document.getElementById('factCategory').textContent = project.categoryLabel;
   document.getElementById('factLocation').textContent = project.location;
-  document.getElementById('factDuration').textContent = project.duration;
-  document.getElementById('factCompleted').textContent = project.completed;
+  [['Client', 'client'], ['Duration', 'duration'], ['Completed', 'completed']].forEach(([id, key]) => {
+    if (!project[key]) return;
+    document.getElementById('fact' + id).textContent = project[key];
+    document.getElementById('fact' + id + 'Row').hidden = false;
+  });
+
+  const galleryEl = document.getElementById('detailGallery');
+  const gridEl = document.getElementById('detailGalleryGrid');
+  let galleryHtml = '';
+  if (project.video) {
+    galleryHtml += '<div class="detail-gallery-video"><video controls playsinline preload="metadata" poster="' + project.video.poster + '"><source src="' + project.video.src + '" type="video/mp4"></video></div>';
+  }
+  (project.gallery || []).forEach((img) => {
+    galleryHtml += '<div class="detail-gallery-item"><img src="' + img.src + '" alt="' + img.alt + '" loading="lazy"></div>';
+  });
+  if (galleryHtml) {
+    gridEl.innerHTML = galleryHtml;
+    galleryEl.hidden = false;
+  }
 
   const claimBtn = document.getElementById('detailWhatsapp');
   if (claimBtn) {
