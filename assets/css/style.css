@@ -67,8 +67,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   height: 92px;
 }
 
+.site-header.is-scrolled { --brand-h: 68px; }
+
 .site-header.is-scrolled .brand img {
-  height: 68px;
+  height: var(--brand-h);
 }
 
 .nav-inner {
@@ -82,15 +84,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .brand {
+  --brand-h: 86px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2px;
 }
 
 .brand-tag {
   display: block;
-  padding-left: 4px;
+  /* start under the wordmark: the icon takes ~28% of the 3.36:1 lockup */
+  padding-left: calc(var(--brand-h) * 0.94);
+  margin-top: calc(var(--brand-h) * -0.09);
+  transition: padding-left 0.4s var(--ease), margin-top 0.4s var(--ease);
   font-family: var(--font-body);
   font-size: 10.5px;
   font-weight: 700;
@@ -102,7 +107,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .brand img {
-  height: 86px;
+  height: var(--brand-h);
   width: auto;
   display: block;
   transition: height 0.4s var(--ease);
