@@ -970,6 +970,37 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 64px 0;
 }
 
+.memberships-strip {
+  background: var(--color-cream);
+  padding: 28px 0;
+}
+
+.memberships-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.memberships-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-taupe-dark);
+  white-space: nowrap;
+}
+
+.memberships-logos {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.memberships-logos .membership-logo { width: 128px; height: 72px; }
+
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2532,6 +2563,9 @@ body.promo-open { overflow: hidden; }
   .band-art-left, .band-art-right { display: none; }
   .why-dots { display: none; }
   .pillars-grid { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+  .memberships-inner { flex-direction: column; gap: 18px; }
+  .memberships-logos { gap: 12px; }
+  .memberships-logos .membership-logo { width: 96px; height: 60px; }
   .pillar:nth-child(2) { border-left: 1px solid rgba(255,255,255,0.12); padding-left: 32px; }
   .pillar:nth-child(3) { border-left: none; padding-left: 0; }
 
