@@ -16,9 +16,16 @@ const SAAFORA_PROJECTS = [
       { src: 'assets/img/projects/khader-jamal/front.webp', alt: 'Front elevation of the Khader Jamal Corporation building' },
       { src: 'assets/img/projects/khader-jamal/corner.webp', alt: 'Corner view of the Khader Jamal Corporation building' }
     ],
-    video: {
-      src: 'assets/videos/khader-jamal.mp4',
-      poster: 'assets/videos/khader-jamal-poster.jpg'
-    }
+    videos: [
+      {
+        src: 'assets/videos/khader-jamal.mp4',
+        poster: 'assets/videos/khader-jamal-poster.jpg'
+      },
+      {
+        src: 'assets/videos/khader-jamal-2.mp4',
+        poster: 'assets/videos/khader-jamal-2-poster.jpg',
+        portrait: true
+      }
+    ]
   }
 ];

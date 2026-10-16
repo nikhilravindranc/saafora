@@ -33,13 +33,17 @@
 
   const galleryEl = document.getElementById('detailGallery');
   const gridEl = document.getElementById('detailGalleryGrid');
-  let galleryHtml = '';
-  if (project.video) {
-    galleryHtml += '<div class="detail-gallery-video"><video controls playsinline preload="metadata" poster="' + project.video.poster + '"><source src="' + project.video.src + '" type="video/mp4"></video></div>';
+  const videoHtml = (v) => '<div class="detail-gallery-video' + (v.portrait ? ' is-portrait' : '') + '"><video controls playsinline preload="metadata" poster="' + v.poster + '"><source src="' + v.src + '" type="video/mp4"></video></div>';
+  const videos = project.videos || [];
+  const wide = videos.filter((v) => !v.portrait);
+  const tall = videos.filter((v) => v.portrait);
+  const photos = (project.gallery || []).map((img) => '<div class="detail-gallery-item"><img src="' + img.src + '" alt="' + img.alt + '" loading="lazy"></div>').join('');
+  let galleryHtml = wide.map(videoHtml).join('');
+  if (tall.length) {
+    galleryHtml += '<div class="detail-gallery-mix"><div class="detail-gallery-stack">' + photos + '</div>' + tall.map(videoHtml).join('') + '</div>';
+  } else {
+    galleryHtml += photos;
   }
-  (project.gallery || []).forEach((img) => {
-    galleryHtml += '<div class="detail-gallery-item"><img src="' + img.src + '" alt="' + img.alt + '" loading="lazy"></div>';
-  });
   if (galleryHtml) {
     gridEl.innerHTML = galleryHtml;
     galleryEl.hidden = false;
