@@ -2578,6 +2578,14 @@ body.promo-open { overflow: hidden; }
 
 @media (max-width: 900px) {
   .nav-toggle { display: flex; }
+  /* backdrop-filter makes the header the containing block for the fixed
+     full-screen menu, clipping it to the header strip -- drop it on mobile */
+  .site-header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.97);
+  }
+  body.nav-open { overflow: hidden; }
   .brand { --brand-h: 70px; }
   .site-header.is-scrolled { --brand-h: 58px; }
   .hero-content { padding: 0 24px 72px; }

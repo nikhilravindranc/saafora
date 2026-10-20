@@ -17,10 +17,15 @@ const navToggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('is-open');
-    navLinks.classList.toggle('is-open');
-  });
+  const setMenu = (open) => {
+    navToggle.classList.toggle('is-open', open);
+    navLinks.classList.toggle('is-open', open);
+    document.body.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+  };
+  navToggle.addEventListener('click', () => setMenu(!navLinks.classList.contains('is-open')));
+  navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 }
 
 // ===== Hero video: fade in once playable, keep poster as instant paint =====
