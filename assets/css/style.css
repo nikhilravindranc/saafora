@@ -158,6 +158,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: all 0.4s var(--ease);
 }
 
+.nav-menu-cta { display: none; }
+
 .nav-cta:hover {
   background: var(--color-taupe);
   border-color: var(--color-taupe);
@@ -2720,6 +2722,24 @@ body.promo-open { overflow: hidden; }
   .nav-links a::after { background: var(--color-taupe); }
 
   .nav-cta { display: none; }
+
+  .nav-links .nav-menu-cta { display: block; margin-top: 12px; }
+
+  .nav-links .nav-menu-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 34px;
+    border-radius: 100px;
+    background: var(--color-taupe);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links .nav-menu-cta a::after { display: none; }
 
   .nav-toggle.is-open {
     position: fixed;
