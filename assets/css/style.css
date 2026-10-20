@@ -1259,6 +1259,67 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex-direction: column;
 }
 
+.upcoming { padding-bottom: 110px; }
+
+.upcoming-title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  color: var(--color-navy);
+  margin-bottom: 32px;
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.upcoming-card {
+  background: var(--color-cream);
+  border-radius: 6px;
+  padding: 40px 36px;
+}
+
+.upcoming-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--color-taupe);
+  margin-bottom: 22px;
+}
+
+.upcoming-icon svg { width: 24px; height: 24px; }
+
+.upcoming-tag {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-taupe-dark);
+  margin-bottom: 8px;
+}
+
+.upcoming-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+}
+
+.upcoming-card p {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  color: var(--color-navy);
+  opacity: 0.65;
+}
+
 .projects-grid.is-single { grid-template-columns: 1fr; }
 
 .project-card.is-featured {
@@ -1882,7 +1943,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .director-photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   border-radius: 6px;
   overflow: hidden;
   background: var(--color-white);
@@ -2559,6 +2620,8 @@ body.promo-open { overflow: hidden; }
   .stat:nth-child(3), .stat:nth-child(4) { border-top: 1px solid var(--color-mist); }
   .projects-grid { grid-template-columns: 1fr 1fr; gap: 24px; padding-bottom: 80px; }
   .projects-grid.is-single { grid-template-columns: 1fr; }
+  .upcoming-grid { grid-template-columns: 1fr; }
+  .upcoming { padding-bottom: 80px; }
   .project-card.is-featured { grid-template-columns: 1fr; gap: 28px; }
   .band-art-left, .band-art-right { display: none; }
   .why-dots { display: none; }
