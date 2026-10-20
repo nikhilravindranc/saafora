@@ -145,6 +145,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-links a:hover::after { width: 100%; }
 
 .nav-cta {
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   padding: 12px 28px;
@@ -2555,6 +2556,16 @@ body.promo-open { overflow: hidden; }
 /* ===========================
    Responsive
 =========================== */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .nav-inner { padding: 0 28px; }
+  .brand { --brand-h: 66px; }
+  .site-header.is-scrolled { --brand-h: 56px; }
+  .nav-links { gap: 22px; }
+  .nav-links a { font-size: 15.5px; }
+  .nav-cta { padding: 10px 18px; font-size: 14px; }
+  .brand-tag { font-size: 9px; letter-spacing: 0.1em; }
+}
+
 @media (min-width: 901px) and (max-width: 1220px) {
   .solutions-grid { grid-template-columns: minmax(200px, 220px) 1fr; gap: 32px; }
   .solutions-panel { grid-template-columns: minmax(200px, 1fr) minmax(0, 2.4fr); }
@@ -2567,6 +2578,8 @@ body.promo-open { overflow: hidden; }
 
 @media (max-width: 900px) {
   .nav-toggle { display: flex; }
+  .brand { --brand-h: 70px; }
+  .site-header.is-scrolled { --brand-h: 58px; }
   .hero-content { padding: 0 24px 72px; }
   .container { padding: 0 24px; }
   .nav-inner { padding: 0 24px; }
@@ -2578,6 +2591,13 @@ body.promo-open { overflow: hidden; }
   .approach-bg-art { width: 240px; opacity: 0.25; }
   .band-art { width: 260px; right: 24px; opacity: 0.5; }
   .band-dots { display: none; }
+
+  /* .container's mobile padding shorthand wipes vertical padding on these */
+  .cta-inner { padding: 0; }
+  .footer-top { padding-bottom: 56px; }
+  .footer-bottom { padding: 26px 24px; }
+  .detail-back { padding-top: 40px; }
+  .detail-gallery { padding-top: 24px; }
 
   .page-header { padding: calc(var(--nav-height) + 48px) 0 56px; }
   .page-header-dots { display: none; }
@@ -2706,6 +2726,9 @@ body.promo-open { overflow: hidden; }
 }
 
 @media (max-width: 480px) {
+  .brand { --brand-h: 58px; }
+  .site-header.is-scrolled { --brand-h: 52px; }
+  .brand-tag { font-size: 9px; letter-spacing: 0.1em; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
 
