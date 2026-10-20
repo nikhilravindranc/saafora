@@ -29,12 +29,16 @@
     } catch (e) {}
   }
 
-  function openPromo() {
-    if (alreadyShown()) return;
+  function showPromo() {
     markShown();
     overlay.classList.add('is-visible');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.classList.add('promo-open');
+  }
+
+  function openPromo() {
+    if (alreadyShown()) return;
+    showPromo();
   }
 
   function closePromo() {
@@ -46,6 +50,16 @@
   if (!alreadyShown()) {
     setTimeout(openPromo, SHOW_DELAY_MS);
   }
+
+  // "Discuss Your Project" buttons open the pop-up on demand (any time)
+  document.querySelectorAll('[data-open-promo]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const menu = document.querySelector('.nav-links.is-open');
+      if (menu) document.getElementById('navToggle').click();
+      showPromo();
+    });
+  });
 
   if (laterBtn) laterBtn.addEventListener('click', closePromo);
   if (closeBtn) closeBtn.addEventListener('click', closePromo);
